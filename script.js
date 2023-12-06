@@ -147,9 +147,13 @@ function startTimer() {
   intervalId = setInterval(() => {
     timeLeft -= 1;
     timerElement.innerText = `Time Remaining: ${timeLeft}s`;
+    if (timeLeft === 5) {
+      document.getElementById('app').classList.add('shake-animation');
+    }
     if (timeLeft <= 0) {
       clearInterval(intervalId);
       timerElement.innerText = "Time's up!";
+      document.getElementById('app').classList.remove('shake-animation');
       selectAnswer(questions[currentQuestionIndex], null);
     }
   }, 1000);
