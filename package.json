@@ -1,0 +1,21 @@
+{
+  "name": "desmond-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build-css": "tailwindcss -i src/styles/global.css -o src/styles/base.css --minify",
+    "watch-css": "tailwindcss -i src/styles/global.css -o src/styles/base.css --watch --minify"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.9"
+  }
+}

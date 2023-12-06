@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #f0f;
+  animation: fall linear forwards;
+  opacity: 0;
+}
+
+@keyframes fall {
+  0% {
+    top: -10px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .fixed-width-lg {
+    width: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fixed-width-lg {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.emoji {
+  position: fixed;
+  font-size: 24px; /* Adjust the size of emojis */
+  animation: fallEmoji linear forwards;
+  opacity: 0;
+}
+
+@keyframes fallEmoji {
+  0% {
+    top: -10px;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}

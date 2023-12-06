@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desmond Grey's Brainy Quest</title>
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon-16x16.png" />
+    <link rel="manifest" href="/src/images/site.webmanifest" />
+    <link rel="mask-icon" href="/src/images/safari-pinned-tab.svg" color="#5bbad5" />
+    <link href="/src/styles/base.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Desmond Grey's Brainy Quest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://desmondgrey.pages.dev/" />
+    <meta property="og:image" content="https://desmondgrey.pages.dev/src/images/featured.png" />
+    <meta
+      property="og:description"
+      content="Dive into a world of interactive, educational fun with Desmond Grey's Brainy Quest. This vibrant quiz web application, designed specifically for young minds, features intuitive questions, immediate feedback, exciting timers, and score tracking."
+    />
+    <meta property="og:site_name" content="Desmond Grey's Brainy Quest" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@markllego" />
+    <meta name="twitter:title" content="Desmond Grey's Brainy Quest" />
+    <meta
+      name="twitter:description"
+      content="Dive into a world of interactive, educational fun with Desmond Grey's Brainy Quest. This vibrant quiz web application, designed specifically for young minds, features intuitive questions, immediate feedback, exciting timers, and score tracking."
+    />
+    <meta name="twitter:image" content="https://desmondgrey.pages.dev/src/images/featured.png" />
+  </head>
+  <body class="flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-400 to-indigo-600 px-4">
+    <main id="app" class="fixed-width-lg container mx-auto w-full max-w-lg rounded-lg bg-white p-4 text-center shadow-xl" role="main">
+      <header class="mb-4">
+        <h1 class="text-2xl font-bold text-gray-800">Desmond Grey's Brainy Quest</h1>
+      </header>
+      <img
+        src="/src/images/desmond.jpg"
+        alt="Desmond"
+        id="image"
+        class="mx-auto mb-4 h-24 w-24 rounded-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:shadow-xl sm:h-32 sm:w-32"
+      />
+      <h2 id="timer" class="mb-6 text-xl font-bold text-gray-700" aria-label="Timer"></h2>
+      <section aria-labelledby="question-heading">
+        <div id="question" class="mb-8 text-xl font-semibold text-gray-800" aria-live="polite"></div>
+      </section>
+      <form id="answers" class="grid grid-cols-1 gap-4 md:grid-cols-2" aria-label="Answers" role="form" aria-describedby="explanation">
+        <!-- Answer buttons will be injected here -->
+      </form>
+      <div id="explanation" class="mt-8 hidden text-sm" aria-live="polite"></div>
+      <button
+        id="next-btn"
+        class="mt-4 cursor-not-allowed rounded bg-blue-500 px-6 py-2 font-bold text-white opacity-50 hover:bg-blue-400"
+        disabled
+        aria-label="Next Question"
+      >
+        Next
+      </button>
+      <button id="restart-btn" class="mt-4 hidden rounded bg-green-500 px-6 py-2 font-bold text-white hover:bg-green-400" aria-label="Restart Quiz">
+        Restart Quiz
+      </button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
