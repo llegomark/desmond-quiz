@@ -285,7 +285,7 @@ document.getElementById('next-btn').addEventListener('click', goToNextQuestion);
 document.getElementById('restart-btn').addEventListener('click', restartQuiz);
 
 // Fetch quiz data
-fetch('quizdata.json')
+fetch('/src/data/quizdata.json')
   .then((response) => response.json())
   .then((quizQuestions) => {
     startQuiz(quizQuestions);
